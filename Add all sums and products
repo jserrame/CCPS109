@@ -1,0 +1,10 @@
+#Count all sums and products
+def count_distinct_sums_and_products(items):
+    se = set()
+    for i in range(len(items)):
+        for one in items[i:]:
+            x = items[i] + one
+            y = items[i] * one
+            se.add(x)
+            se.add(y)
+    return (len(se))
