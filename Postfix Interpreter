@@ -1,0 +1,21 @@
+#Postfix Interpreter
+def postfix_evaluate(items):
+    stack = []
+    for i in items:
+        if type(i) is int:
+            stack.append(i)
+            continue
+        operater1, operater2 = stack.pop(), stack.pop()
+        
+        if i == '-':
+            stack.append(operater2 - operater1)
+        elif i == '*':
+            stack.append(operater2 * operater1)
+        elif i == '+':
+            stack.append(operater2 + operater1)
+        elif i == '/':
+            if operater1!=0:
+                stack.append(operater2 // operater1)
+            else:
+                stack.append(0)
+    return stack.pop()
