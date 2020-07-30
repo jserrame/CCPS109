@@ -1,0 +1,18 @@
+#Carry on Pythonista
+def count_carries(a, b):
+    f = min(a,b)
+    c = max(a,b)
+    ct = 0
+    cy = 0
+    while f != 0 or cy != 0:
+        lastf = f%10
+        lastc = c%10
+        total = lastf + lastc + cy
+        if total > 9:
+            ct += 1
+            cy = total // 10
+        else:
+            cy = 0
+        f = f // 10
+        c = c // 10
+    return ct
