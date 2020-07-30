@@ -1,23 +1,25 @@
 #Revorse the vewels
 def reverse_vowels(text):
     vowels = ("aeiouAEIOU")
-    txt_vowels = ""
+    text_v = ""
 
-    for ch in text:
-        if ch in vowels:
-            txt_vowels = ch + txt_vowels
+    for i in text:
+        if i in vowels:
+            text_v = i + text_v
+
 
     count = 0
-    res = ''
+    ans = ''
 
-    for ch in text:
-        if ch in vowels:
-            if ch.isupper():
-                res += txt_vowels[count].upper()
+
+    for i in text:
+        if i in vowels:
+            if i.isupper():
+                ans += text_v[count].upper()
             else:
-                res += txt_vowels[count].lower()
+                ans += text_v[count].lower()
             count += 1
         else:
-            res += ch
+            ans += i
 
-    return res
+    return ans
