@@ -1,0 +1,7 @@
+#Sum of two squares
+def sum_of_two_squares(n):
+    sq_rt = int(n ** 0.5)
+    for i in range(sq_rt, 0, -1):
+        a = n - i **2
+        if (int(a ** 0.5)) **2 == a and int(a ** 0.5) > 0:
+            return i, int(a ** 0.5)
