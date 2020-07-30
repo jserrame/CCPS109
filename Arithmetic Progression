@@ -1,0 +1,37 @@
+#Arithmetic progression
+def arithmetic_progression(elems):
+    l_e = len(elems)
+    if l_e == 1:
+        return (elems[0], 0, 1)
+    if l_e == 2:
+        return (elems[0], elems[1] - elems[0], 2)
+    then = [[0 for x in range(l_e)] for y in range(l_e)]
+    for a in range(l_e - 1):
+        then[a][l_e - 1] = 2
+    for b in range(l_e - 2, 0, -1):
+        a = b - 1
+        c = b + 1
+        while (a >= 0 and c <= l_e - 1):
+            if (elems[a] + elems[c] < 2 * elems[b]):
+                c += 1
+            elif (elems[a] + elems[c] > 2 * elems[b]):
+                then[a][b] = 2
+                a -= 1
+            else:
+                then[a][b] = then[b][c] + 1
+                a -= 1
+                c += 1
+        while (a >= 0):
+            then[a][b] = 2
+            a -= 1
+    lap = 0
+    maxa = 0
+    maxb = 0
+    for a in range(l_e):
+        for b in range(l_e):
+            if then[a][b] > lap:
+                lap = then[a][b]
+                maxa = a
+                maxb = b
+
+    return (elems[maxa], elems[maxb] - elems[maxa], lap)
