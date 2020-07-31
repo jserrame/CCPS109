@@ -1,0 +1,18 @@
+#Possible words in Hangman
+def possible_words(words,pattern):
+  match = []
+  for word in words:
+    isMatch=True
+    if len(word)==len(pattern):
+      for i in range(len(pattern)):
+        if pattern[i].isalpha():
+          if pattern[i]!=word[i]:
+            isMatch=False
+            break
+        else:
+          if word[i] in pattern:
+            isMatch=False
+            break
+      if isMatch:
+        match.append(word)
+  return match
