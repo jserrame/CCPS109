@@ -1,0 +1,27 @@
+#Words that contain given letter sequence
+def sseq(x, y, m, n):   #Function for subsequence
+    if m == 0:
+        return True
+    if n == 0:
+        return False
+    if x[m - 1] == y[n - 1]:
+        return sseq(x, y , m - 1, n - 1)
+    return sseq(x, y, m, n - 1)
+def words_with_letters(lst, x):     #Function for substring
+    result = []
+    for i in range(0, len(lst)):
+        if x in lst[i]:
+            result.append(lst[i])
+            continue
+        else:
+            m = len(x)
+            n = len(lst[i])
+            z = sseq(x, lst[i], m, n)
+            if z == True:
+                result.append(lst[i])
+            continue
+    return result
+lst = []
+with open('words_sorted.txt', 'r') as file:
+    for i in file:
+        lst.append(i)
