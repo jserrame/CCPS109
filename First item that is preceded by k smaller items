@@ -1,0 +1,12 @@
+#First item that is preceded by k smaller items
+def first_preceded_by_smaller(items, k=1):
+    for i in range(len(items)):
+        j = 0
+        counter = 0
+        while i > j:
+            if items[i] > items[j]:
+                counter += 1
+            j += 1
+        if counter >= k:
+            return items[i]
+    return None
