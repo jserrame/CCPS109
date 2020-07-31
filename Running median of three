@@ -1,0 +1,19 @@
+#Running median of three
+def running_median_of_three(items):
+    ans = []
+    if(len(items)<=2):
+        for n in items:
+            ans.append(n)
+    else:
+        ans.append(items[0])
+        ans.append(items[1])
+        for i in range(2,len(items)):
+            if (items[i]==items[i-1]) or (items[i]==items[i-2]):
+                ans.append(items[i])
+            elif (items[i-1]==items[i-2]):
+                ans.append(items[i-1])
+            else:
+                tmp = [items[i-2],items[i-1],items[i]]
+                tmp.sort()
+                ans.append(tmp[1])
+    return ans
