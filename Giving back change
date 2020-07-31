@@ -1,0 +1,11 @@
+#Giving back change
+def give_change(amount, coins):
+   change = []
+   count = 0;
+   while amount > 0:
+       if amount >= coins[count]:
+           amount = amount - coins[count]
+           change.append(coins[count])
+       else:
+           count += 1
+   return change
