@@ -1,0 +1,13 @@
+#Keep doubling
+def double_until_all_digits(n, giveup=1000):
+    counter = 0
+    while counter <= giveup:
+        result = True
+        for i in range(10):
+            if str(i) not in str(n):
+                result = False
+        if result:
+            return counter
+        n *= 2
+        counter += 1
+    return -1
