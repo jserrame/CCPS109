@@ -1,0 +1,16 @@
+#Expand positive integer intervals
+def expand_intervals(intervals):
+  lst = []
+  s = intervals.split(",")
+
+  for r in s:
+      Range = r.split("-")
+      i = int(Range[0])
+
+      if len(Range)==1:
+        lst.append(i)
+      else:
+        while i<=int(Range[1]):
+          lst.append(i)
+          i += 1
+  return lst
