@@ -1,0 +1,14 @@
+#Only odd digits
+def only_odd_digits(n):
+    x = flag = 0
+    if n == 0:
+        return False
+    while n > 0:
+        x = n%10
+        if x%2 == 0:
+            flag = 1
+            return False
+            break
+        n = n // 10
+    if flag == 0:
+        return True
