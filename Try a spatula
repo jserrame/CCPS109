@@ -1,0 +1,6 @@
+#Try a spatula
+def pancake_scramble(text):
+  txt = text
+  for i in range(2,len(text)+1):
+    txt = txt[:i][::-1]+txt[i:]
+  return txt
