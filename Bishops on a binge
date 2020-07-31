@@ -1,0 +1,12 @@
+#Bishops on a binge
+def safe_squares_bishops(n, bishops):
+    sfc = 0
+    for row in range(n):
+        for colum in range(n):
+            s=True
+            for pos in bishops:
+                if abs(row - pos[0]) == abs(colum - pos[1]):
+                    s=False
+                    break
+            if s:sfc+=1
+    return sfc
