@@ -1,5 +1,5 @@
 #Words that contain given letter sequence
-def sseq(x, y, m, n):   #Function for subsequence
+def sseq(x, y, m, n):  
     if m == 0:
         return True
     if n == 0:
@@ -7,7 +7,7 @@ def sseq(x, y, m, n):   #Function for subsequence
     if x[m - 1] == y[n - 1]:
         return sseq(x, y , m - 1, n - 1)
     return sseq(x, y, m, n - 1)
-def words_with_letters(lst, x):     #Function for substring
+def words_with_letters(lst, x):     
     result = []
     for i in range(0, len(lst)):
         if x in lst[i]:
