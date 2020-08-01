@@ -1,10 +1,10 @@
 #Reversing the reversed***
 def reverse_reversed(items):
   if (isinstance(items, list)):
-    lst = []
+    contains = []
     for ele in items:
-     lst.append(reverse_reversed(ele))
-    lst.reverse()
-    return lst
+     contains.append(reverse_reversed(ele))
+    contains.reverse()
+    return contains
   else:
     return items
