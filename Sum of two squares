@@ -1,7 +1,8 @@
 #Sum of two squares
+from math import *
 def sum_of_two_squares(n):
-    sq_rt = int(n ** 0.5)
+    sq_rt = int(sqrt(n))
     for i in range(sq_rt, 0, -1):
-        a = n - i **2
-        if (int(a ** 0.5)) **2 == a and int(a ** 0.5) > 0:
-            return i, int(a ** 0.5)
+        a = n - i ** 2
+        if (int(sqrt(a))) ** 2 == a and int(sqrt(a)) > 0:
+            return i, int(sqrt(a))
