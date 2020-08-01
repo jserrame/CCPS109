@@ -1,6 +1,6 @@
 #Expand positive integer intervals
 def expand_intervals(intervals):
-  lst = []
+  digits = []
   s = intervals.split(",")
 
   for r in s:
@@ -8,9 +8,9 @@ def expand_intervals(intervals):
       i = int(Range[0])
 
       if len(Range)==1:
-        lst.append(i)
+        digits.append(i)
       else:
         while i<=int(Range[1]):
-          lst.append(i)
+          digits.append(i)
           i += 1
-  return lst
+  return digits
