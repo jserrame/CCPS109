@@ -1,7 +1,5 @@
 #Ryerson Letter Grade 
-
-print("Let's calculate your letter grade based on your final course grade.")
-
+score = ""
 def ryerson_letter_grade (score):
   if (0<= score < 50):
     return "F"
@@ -32,18 +30,4 @@ def ryerson_letter_grade (score):
   else:
     return "Invalid number"
 
-  
-def whatGrade():
-  grade = float(input("Enter the final course grade: "))
 
-  return grade 
-
-def main():
-  grade = whatGrade()
-  print (letterGrade (grade))
-
-def letterGrade (grade):
-  print ("Score\tLetter Grade")
-  print ((grade), "\t", ryerson_letter_grade (grade))
-
-main ()
