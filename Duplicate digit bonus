@@ -1,5 +1,5 @@
   #Duplicate digit bonus
-  def duplicate_digit_bonus(n):
+ def duplicate_digit_bonus(n):
     digit = str(n)
     bonus = 0
     result = 1
