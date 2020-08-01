@@ -26,4 +26,4 @@ def calkin_wilf(n):
             if a == n:
                 return seq[-1]
                 
-    return [-1]
+    return -1
