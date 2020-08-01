@@ -2,16 +2,11 @@
 def reverse_vowels(text):
     vowels = ("aeiouAEIOU")
     text_v = ""
-
     for i in text:
         if i in vowels:
             text_v = i + text_v
-
-
-    count = 0
-    ans = ''
-
-
+            count = 0
+            ans = ''
     for i in text:
         if i in vowels:
             if i.isupper():
@@ -21,5 +16,4 @@ def reverse_vowels(text):
             count += 1
         else:
             ans += i
-
     return ans
