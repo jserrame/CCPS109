@@ -6,7 +6,7 @@ def create_zigzag(rows, cols, start = 1):
         for j in range(cols):
             x.append(start)
             start += 1
-        if i%2==1:
+        if i%2 == 1:
             x.reverse()
         rez.append(x)
     return rez
