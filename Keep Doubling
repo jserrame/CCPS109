@@ -10,4 +10,4 @@ def double_until_all_digits(n, giveup=1000):
             return counter
         n *= 2
         counter += 1
-    return -1
+    return (-1)
