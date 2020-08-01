@@ -6,7 +6,6 @@ def postfix_evaluate(items):
             stack.append(i)
             continue
         operater1, operater2 = stack.pop(), stack.pop()
-        
         if i == '-':
             stack.append(operater2 - operater1)
         elif i == '*':
