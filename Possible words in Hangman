@@ -2,17 +2,17 @@
 def possible_words(words,pattern):
   match = []
   for word in words:
-    isMatch=True
+    match_yes = True
     if len(word)==len(pattern):
       for i in range(len(pattern)):
         if pattern[i].isalpha():
-          if pattern[i]!=word[i]:
-            isMatch=False
+          if pattern[i] != word[i]:
+            match_yes = False
             break
         else:
           if word[i] in pattern:
-            isMatch=False
+            match_yes = False
             break
-      if isMatch:
+      if match_yes:
         match.append(word)
   return match
