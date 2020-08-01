@@ -1,8 +1,8 @@
 def three_summers(items, goal):
-    for item1 in range(len(items)):
-        for item2 in range(item1+1, len(items)):
-            for item3 in range((item2)+1, len(items)):
-                sum = int(items[item1]) + int(items[item2]) + int(items[item3])
+    for first in range(len(items)):
+        for second in range((first+1), len(items)):
+            for third in range((second)+1, len(items)):
+                sum = int(items[first]) + int(items[second]) + int(items[third])
                 if int(sum) == int(goal):
                     return True
     return False
