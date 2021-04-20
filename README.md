@@ -2,4 +2,4 @@
 
 This course was taken in Spring 2020.
 
-Content: Python Assignments
+Content: Intro to Python projects
